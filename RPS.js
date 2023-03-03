@@ -1,9 +1,12 @@
 console.log ("hi");
 
+const arrayRPS = ["Rock","Paper","Scissors"];
+
+function getComputerChoice(){
 
 
-let arrayRPS = ["Rock","Paper","Scissors"];
+    var random = arrayRPS[(Math.floor(Math.random() * arrayRPS.length))];
+    
+}
 
-var random = arrayRPS[(Math.floor(Math.random() * arrayRPS.length))];
-
-console.log(random);
+console.log(getComputerChoice())
