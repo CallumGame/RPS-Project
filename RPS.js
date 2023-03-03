@@ -1,10 +1,9 @@
-console.log ("hi")
-
-let randomValue = randomRPS[Math.floor(Math.random() * randomRPS.length)];
-
-let randomRPS = ["Rock","Paper","Scissors"]
-
-function getComputerChoice(){
+console.log ("hi");
 
 
-}
+
+let arrayRPS = ["Rock","Paper","Scissors"];
+
+var random = arrayRPS[(Math.floor(Math.random() * arrayRPS.length))];
+
+console.log(random);
