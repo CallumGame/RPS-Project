@@ -7,7 +7,7 @@ function getComputerChoice(){
     var random = arrayRPS[(Math.floor(Math.random() * arrayRPS.length))];
     return(random)
 }
-console.log(getComputerChoice())
+
 
 function checkWinner(playerSelection,computerSelection){
 if(playerSelection == computerSelection){
@@ -41,19 +41,54 @@ else{ (result == "computer")
 
     }
 
-   
+   function getPlayerChoice(){
+let input = false;
+while(input == false){
+    const choice = prompt("Choose Rock Paper or Scissors")
+    if(choice == null){
+        continue
+    }
+    const choiceLower = choice.toLowerCase();
+    if(arrayRPS.includes(choiceLower)){
+input = true;
+return choiceLower
+    }
+
+}
+
+
+   }
    
    
 
     function game(){
+let = scorePlayer = 0;
+let = scoreComputer = 0;
         console.log("Welcome");
         for (let i = 1; i <= 5; i++) {
    
-            const playerSelection = "paper";
+            const playerSelection = getPlayerChoice();
             const computerSelection = getComputerChoice();
 console.log( playRound(playerSelection,computerSelection))
+if(checkWinner(playerSelection,computerSelection) == "player"){
+    scorePlayer++;
+}
+else if(checkWinner(playerSelection,computerSelection) == "computer"){
+    scoreComputer++;
+}
+console.log("Game Over!")
 
-          }
+if (scorePlayer > scoreComputer){
+    console.log("Player was the winner")
+}
+else if(scorePlayer < scoreComputer){
+    console.log("Computer was the winner")
+}
+else {
+    console.log("we have a draw")
+}
+
     }
+}
     
     game()
