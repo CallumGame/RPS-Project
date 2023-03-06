@@ -65,18 +65,19 @@ return choiceLower
 let = scorePlayer = 0;
 let = scoreComputer = 0;
         console.log("Welcome");
-        for (let i = 1; i <= 5; i++) {
+        for (let i = 0; i <= 5; i++) {
    
             const playerSelection = getPlayerChoice();
             const computerSelection = getComputerChoice();
 console.log( playRound(playerSelection,computerSelection))
+console.log("-------")
 if(checkWinner(playerSelection,computerSelection) == "player"){
     scorePlayer++;
 }
 else if(checkWinner(playerSelection,computerSelection) == "computer"){
     scoreComputer++;
 }
-console.log("Game Over!")
+        }
 
 if (scorePlayer > scoreComputer){
     console.log("Player was the winner")
@@ -89,6 +90,6 @@ else {
 }
 
     }
-}
+
     
     game()
