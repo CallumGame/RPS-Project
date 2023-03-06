@@ -1,6 +1,5 @@
-console.log ("hi");
 
-const arrayRPS = ["Rock","Paper","Scissors"];
+const arrayRPS = ["rock","paper","scissors"];
 
 function getComputerChoice(){
 
@@ -12,11 +11,11 @@ console.log(getComputerChoice())
 
 function checkWinner(playerSelection,computerSelection){
 if(playerSelection == computerSelection){
-return "Draw";
+return "draw";
 }
-else if( (playerSelection == "Rock" && computerSelection == "Scissors") ||
-        (playerSelection == "Scissors" && computerSelection == "Paper") ||
-        (playerSelection == "Paper" && computerSelection == "Rock")){
+else if( (playerSelection == "rock" && computerSelection == "scissors") ||
+        (playerSelection == "scissors" && computerSelection == "paper") ||
+        (playerSelection == "paper" && computerSelection == "rock")){
     return "player";
 }
 else {
@@ -29,7 +28,7 @@ else {
 
 function playRound(playerSelection,computerSelection){
   const result = checkWinner(playerSelection,computerSelection);
-  if(result == "Draw"){
+  if(result == "draw"){
   return "Draw play again";
 }
   else if(result == "player") {
@@ -50,7 +49,7 @@ else{ (result == "computer")
         console.log("Welcome");
         for (let i = 1; i <= 5; i++) {
    
-            const playerSelection = "Paper";
+            const playerSelection = "paper";
             const computerSelection = getComputerChoice();
 console.log( playRound(playerSelection,computerSelection))
 
