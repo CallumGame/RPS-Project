@@ -14,9 +14,9 @@ function checkWinner(playerSelection,computerSelection){
 if(playerSelection == computerSelection){
 return "Draw";
 }
-else if( (playerSelection.tolowercase == "rock" && computerSelection == "scissors") ||
-        (playerSelection == "scissors" && computerSelection == "paper") ||
-        (playerSelection == "paper" && computerSelection == "rock")){
+else if( (playerSelection == "Rock" && computerSelection == "Scissors") ||
+        (playerSelection == "Scissors" && computerSelection == "Paper") ||
+        (playerSelection == "Paper" && computerSelection == "Rock")){
     return "player";
 }
 else {
@@ -28,14 +28,29 @@ else {
 
 
 function playRound(playerSelection,computerSelection){
-  const result = checkwinner(playerSelection,computerSelection);
-  if(result == "draw"){
+  const result = checkWinner(playerSelection,computerSelection);
+  if(result == "Draw"){
   return "Draw play again";}
   else if(result == "player") {
-    return "You win"}
+    return `You win! ${playerSelection} beats ${computerSelection}`}
 else(result == "computer")
-    return "DSJJSHDJS Computer wins"
+    return `DSJJSHDJS Computer wins! ${computerSelection} beats ${playerSelection}`
 
 
 
     }
+
+    const playerSelection = "Paper"
+    const computerSelection = "Rock"
+    console.log(playRound(playerSelection,computerSelection))
+
+    function game(){
+
+        for (let i = 1; i <= answer; i++) {
+
+
+            console.log(i);
+          }
+    }
+    
+    let answer = parseInt(prompt("Let's play Rock Paper Scissors."));
