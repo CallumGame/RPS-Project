@@ -30,27 +30,31 @@ else {
 function playRound(playerSelection,computerSelection){
   const result = checkWinner(playerSelection,computerSelection);
   if(result == "Draw"){
-  return "Draw play again";}
+  return "Draw play again";
+}
   else if(result == "player") {
-    return `You win! ${playerSelection} beats ${computerSelection}`}
-else(result == "computer")
+    return `You win! ${playerSelection} beats ${computerSelection}`
+}
+else{ (result == "computer")
     return `DSJJSHDJS Computer wins! ${computerSelection} beats ${playerSelection}`
-
+}
 
 
     }
 
-    const playerSelection = "Paper"
-    const computerSelection = "Rock"
-    console.log(playRound(playerSelection,computerSelection))
+   
+   
+   
 
     function game(){
+        console.log("Welcome");
+        for (let i = 1; i <= 5; i++) {
+   
+            const playerSelection = "Paper";
+            const computerSelection = getComputerChoice();
+console.log( playRound(playerSelection,computerSelection))
 
-        for (let i = 1; i <= answer; i++) {
-
-
-            console.log(i);
           }
     }
     
-    let answer = parseInt(prompt("Let's play Rock Paper Scissors."));
+    game()
